@@ -25,3 +25,9 @@ services:
       POSTGRES_USER: postgres
       POSTGRES_PASSWORD: postgres
       POSTGRES_DB: postgres
+
+  hawkeye:
+    image: stono/hawkeye
+    command: scan --target /usr/src/app
+    volumes:
+      - ./web:/usr/src/app
